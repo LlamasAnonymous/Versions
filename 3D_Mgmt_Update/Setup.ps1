@@ -28,10 +28,9 @@ while ($Error2 -ne -1978335189 -or $a -eq 10) {
 if ($a -eq 10) {
 
     "There is a problem installing PowerShell 7. Try relaunching or reach out to the administrator." | Out-File ~\ErrorPwsh.txt
-    Start-Sleep 1
-    Start-Process ~\ErrorPwsh.txt
+    Start-Process ~\ErrorPwsh.txt -Wait
     rd ~\ErrorPwsh.txt
     exit
 }
 
-Start-Process "C:\Versions_Beta\3D_Mgmt_Update\Rm3D.bat"
+Start-Process "C:\Versions\3D_Mgmt_Update\Rm3D.bat"
